@@ -1,16 +1,18 @@
 package com.example.carrent
 
+import android.annotation.SuppressLint
 import android.app.ActivityOptions
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 
+@Suppress("DEPRECATION")
+@SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {
 
     private lateinit var handler: Handler
@@ -25,26 +27,24 @@ class SplashScreen : AppCompatActivity() {
 
             val intent = Intent(this,Login::class.java)
 
-            var image = findViewById<ImageView>(R.id.cartooncarlogo)
-            var pairsImage = android.util.Pair<View,String>(image,"logo_image")
+            val cartoonCarLogo = findViewById<ImageView>(R.id.cartooncarlogo)
+            val pairsImage = android.util.Pair<View,String>(cartoonCarLogo,"logo_image")
 
 
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                val options = ActivityOptions.makeSceneTransitionAnimation(this,pairsImage)
-                startActivity(intent, options.toBundle())
-                finish()
-            }
+            val options = ActivityOptions.makeSceneTransitionAnimation(this,pairsImage)
+            startActivity(intent, options.toBundle())
+            finish()
 
-        }, 4500) // delaying 4.5 seconds to open main activity!
+        }, 4000) // delaying 4.0 seconds to open main activity!
 
         val topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation)
         val bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation)
 
-        val cartoonLogo = findViewById<ImageView>(R.id.cartooncarlogo)
+        val cartoonCarLogo = findViewById<ImageView>(R.id.cartooncarlogo)
         val title = findViewById<TextView>(R.id.splashtext)
         val tagline = findViewById<TextView>(R.id.tagline)
 
-        cartoonLogo.animation = topAnim
+        cartoonCarLogo.animation = topAnim
         title.animation = bottomAnim
         tagline.animation = bottomAnim
     }

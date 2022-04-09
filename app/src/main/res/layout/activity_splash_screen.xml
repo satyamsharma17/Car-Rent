@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/futura"
-        android:text="@string/car_rent"
+        android:text="@string/app_name"
         android:transitionName="logo_text"
         android:textAlignment="center"
         android:textColor="@color/black"

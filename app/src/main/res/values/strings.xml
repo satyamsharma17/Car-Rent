@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Car Rent</string>
-    <string name="car_rent">Car Rent</string>
     <string name="cartoon_car">Cartoon Car</string>
     <string name="book_your_next_ride_now">Book your next ride now!</string>
     <string name="logo">logo</string>
@@ -8,7 +7,14 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="forget_password">Forget Password?</string>
-    <string name="go">Go</string>
     <string name="new_user_sign_up_now">New User? SIGN UP NOW!</string>
     <string name="hello_there_welcome_back">Hello there, Welcome back!</string>
+    <string name="welcome">Welcome!</string>
+    <string name="signup_to_start_your_new_journey">SignUp to start your new journey.</string>
+    <string name="full_name">Full Name</string>
+    <string name="e_mail">E-mail</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="go">Go</string>
+    <string name="already_have_an_account_login_now">Already have an account? LogIn now!</string>
+    <string name="create_your_new_account">Create Your New Account</string>
 </resources>
