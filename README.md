@@ -20,7 +20,7 @@ An application to book your next ride.
 
 ## Running Tests
 
-To run tests, install [Android Studio](https://www.github.com/satyamsharma17) on your local device.
+To run tests, install [Android Studio](https://developer.android.com/studio) on your local device.
 
 ## Run Locally
 
