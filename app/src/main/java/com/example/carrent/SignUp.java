@@ -13,18 +13,29 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Objects;
 
 public class SignUp extends AppCompatActivity {
 
     private long pressedTime;
 
-    private ImageView logoImage;
-    private TextView logoText;
-    private TextView sloganText;
-    private TextInputLayout userName;
-    private TextInputLayout passWord;
-    private Button loginNowButton;
-    private Button createAccountButton;
+    ImageView logoImage;
+    TextView logoText;
+    TextView sloganText;
+    TextInputLayout userName;
+    TextInputLayout passWord;
+    TextInputLayout registrationName;
+    TextInputLayout registrationEmail;
+    TextInputLayout registrationPhoneNo;
+    Button loginNowButton;
+    Button createAccountButton;
+
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
+    FirebaseDatabase collection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +45,11 @@ public class SignUp extends AppCompatActivity {
         logoImage = findViewById(R.id.logo_image);
         logoText = findViewById(R.id.logo_text);
         sloganText = findViewById(R.id.slogan_text);
-        userName = findViewById(R.id.username);
-        passWord = findViewById(R.id.password);
+        registrationName = findViewById(R.id.registration_name);
+        registrationEmail = findViewById(R.id.registration_email);
+        registrationPhoneNo = findViewById(R.id.registration_phoneNo);
+        userName = findViewById(R.id.registration_username);
+        passWord = findViewById(R.id.registration_password);
         createAccountButton = findViewById(R.id.create_account_button);
         loginNowButton = findViewById(R.id.login_now_button);
 
@@ -55,6 +69,20 @@ public class SignUp extends AppCompatActivity {
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SignUp.this, pairs);
             startActivity(loginNowActivity, options.toBundle());
 
+        });
+
+        createAccountButton.setOnClickListener(v -> {
+            rootNode = FirebaseDatabase.getInstance();
+            reference = rootNode.getReference("users");
+
+        String name = registrationName.getEditText().getText().toString();
+        String username = userName.getEditText().getText().toString();
+        String email = registrationEmail.getEditText().getText().toString();
+        String phoneNo = registrationPhoneNo.getEditText().getText().toString();
+        String password = passWord.getEditText().getText().toString();
+
+        UserHelperClass helperClass = new UserHelperClass(name, username, email, phoneNo, password);
+        reference.child(username).setValue(helperClass);
         });
     }
 

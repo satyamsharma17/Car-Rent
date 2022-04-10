@@ -47,7 +47,7 @@
         android:layout_marginBottom="20dp">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/name"
+            android:id="@+id/registration_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/full_name"
@@ -66,7 +66,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/username"
+            android:id="@+id/registration_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/username"
@@ -89,7 +89,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email"
+            android:id="@+id/registration_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/e_mail"
@@ -108,7 +108,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/phoneNo"
+            android:id="@+id/registration_phoneNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/phone_number"
@@ -127,7 +127,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password"
+            android:id="@+id/registration_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
