@@ -5,7 +5,6 @@
     <string name="logo">logo</string>
     <string name="sign_in_to_continue">Sign in to continue!</string>
     <string name="username">Username</string>
-    <string name="password">Password</string>
     <string name="forget_password">Forget Password?</string>
     <string name="new_user_sign_up_now">New User? SIGN UP NOW!</string>
     <string name="hello_there_welcome_back">Hello there, Welcome back!</string>
@@ -17,4 +16,17 @@
     <string name="go">Go</string>
     <string name="already_have_an_account_login_now">Already have an account? LogIn now!</string>
     <string name="create_your_new_account">Create Your New Account</string>
+    <string name="iamsatyam17">iamsatyam17</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="payment_icon">Payment Icon</string>
+    <string name="_123">$123</string>
+    <string name="payment">Payment</string>
+    <string name="booking">Booking</string>
+    <string name="_83">83</string>
+    <string name="satyam_sharma">Satyam Sharma</string>
+    <string name="admin_carrent_com">admin@carrent.com</string>
+    <string name="_9876543210">9876543210</string>
+    <string name="password">Password</string>
+    <string name="_12345678">12345678</string>
+    <string name="update">Update</string>
 </resources>

@@ -72,6 +72,7 @@ public class SignUp extends AppCompatActivity {
         });
 
         createAccountButton.setOnClickListener(v -> {
+
             rootNode = FirebaseDatabase.getInstance();
             reference = rootNode.getReference("users");
 
@@ -83,6 +84,9 @@ public class SignUp extends AppCompatActivity {
 
         UserHelperClass helperClass = new UserHelperClass(name, username, email, phoneNo, password);
         reference.child(username).setValue(helperClass);
+
+        Intent UserProfileActivity = new Intent(SignUp.this, UserProfile.class);
+        startActivity(UserProfileActivity);
         });
     }
 
