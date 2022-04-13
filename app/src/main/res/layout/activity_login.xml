@@ -112,11 +112,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/go"
+        android:onClick="loginUser"
         android:backgroundTint="@color/black"
         android:textColor="@color/white"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:transitionName="button_tran"/>
+        android:transitionName="button_tran"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/callSignUp"

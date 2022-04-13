@@ -25,20 +25,20 @@ class SplashScreen : AppCompatActivity() {
         handler = Handler()
         handler.postDelayed({
 
-            val intent = Intent(this,Login::class.java)
+            val intent = Intent(this, Login::class.java)
 
             val cartoonCarLogo = findViewById<ImageView>(R.id.cartooncarlogo)
-            val pairsImage = android.util.Pair<View,String>(cartoonCarLogo,"logo_image")
+            val pairsImage = android.util.Pair<View, String>(cartoonCarLogo, "logo_image")
 
 
-            val options = ActivityOptions.makeSceneTransitionAnimation(this,pairsImage)
+            val options = ActivityOptions.makeSceneTransitionAnimation(this, pairsImage)
             startActivity(intent, options.toBundle())
             finish()
 
-        }, 4000) // delaying 4.0 seconds to open main activity!
+        }, 3000) // delaying 3.0 seconds to open login activity!
 
-        val topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation)
-        val bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation)
+        val topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation)
+        val bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation)
 
         val cartoonCarLogo = findViewById<ImageView>(R.id.cartooncarlogo)
         val title = findViewById<TextView>(R.id.splashtext)
