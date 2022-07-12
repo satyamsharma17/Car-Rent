@@ -23,8 +23,8 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/avatar"
-                android:contentDescription="@string/profile_image" />
+                android:contentDescription="@string/profile_image"
+                android:src="@drawable/avatar" />
 
             <TextView
                 android:id="@+id/fullname_field"
